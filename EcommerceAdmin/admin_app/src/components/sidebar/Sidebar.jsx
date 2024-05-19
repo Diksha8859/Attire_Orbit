@@ -5,13 +5,13 @@ import {
   TrendingUp,
   PermIdentity,
   Storefront,
-  AttachMoney,
   BarChart,
   MailOutline,
   DynamicFeed,
   ChatBubbleOutline,
   WorkOutline,
   Report,
+  MoneySharp,
 } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 
@@ -54,7 +54,7 @@ export default function Sidebar() {
               </li>
             </Link>
             <li className="sidebarListItem">
-              <AttachMoney className="sidebarIcon" />
+              <MoneySharp className="sidebarIcon" />
               Transactions
             </li>
             <li className="sidebarListItem">

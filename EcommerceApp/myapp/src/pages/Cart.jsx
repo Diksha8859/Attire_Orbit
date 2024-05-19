@@ -1,5 +1,5 @@
 import { Add, Remove } from "@material-ui/icons";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
@@ -8,12 +8,14 @@ import { mobile } from "../responsive";
 import StripeCheckout from "react-stripe-checkout";
 import { useEffect, useState } from "react";
 import { userRequest } from "../requestMethod"; 
-import { useHistory } from "react-router";
+import { useHistory } from "react-router-dom";
+import { increaseQuantity, decreaseQuantity, removeProduct } from "../redux/cartRedux"; // Import actions
 
 const KEY = process.env.REACT_APP_STRIPE;
 
 const Container = styled.div`
-background-color:#F0FFFF`;
+  background-color: #F0FFFF;
+`;
 
 const Wrapper = styled.div`
   padding: 20px;
@@ -44,7 +46,7 @@ const TopButton = styled.button`
 `;
 
 const TopTexts = styled.div`
-color:red;
+  color: red;
   ${mobile({ display: "none" })}
 `;
 const TopText = styled.span`
@@ -165,6 +167,7 @@ const Button = styled.button`
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
   const [stripeToken, setStripeToken] = useState(null);
+  const dispatch = useDispatch();
   const history = useHistory();
 
   const onToken = (token) => {
@@ -176,7 +179,7 @@ const Cart = () => {
       try {
         const res = await userRequest.post("/checkout/payment", {
           tokenId: stripeToken.id,
-          amount: 500,
+          amount: cart.total * 100,
         });
         history.push("/success", {
           stripeData: res.data,
@@ -184,12 +187,25 @@ const Cart = () => {
         });
       } catch (error) {
         console.error("Error processing payment:", error);
-        // Handle error here, e.g., show a toast message
       }
     };
-    stripeToken && cart.total && makeRequest();
+    if (stripeToken) {
+      makeRequest();
+    }
   }, [stripeToken, cart.total, history, cart]);
-  
+
+  const handleIncreaseQuantity = (product) => {
+    dispatch(increaseQuantity(product));
+  };
+
+  const handleDecreaseQuantity = (product) => {
+    dispatch(decreaseQuantity(product));
+  };
+
+  const handleRemoveProduct = (product) => {
+    dispatch(removeProduct(product));
+  };
+
   return (
     <Container>
       <Navbar />
@@ -199,7 +215,7 @@ const Cart = () => {
         <Top>
           <TopButton>CONTINUE SHOPPING</TopButton>
           <TopTexts>
-            <TopText><b>Shopping Bag(2)</b></TopText>
+            <TopText><b>Shopping Bag ({cart.products.length})</b></TopText>
             <TopText><b>Your Wishlist (0)</b></TopText>
           </TopTexts>
           <TopButton type="filled">CHECKOUT NOW</TopButton>
@@ -207,7 +223,7 @@ const Cart = () => {
         <Bottom>
           <Info>
             {cart.products.map((product) => (
-              <Product>
+              <Product key={product._id}>
                 <ProductDetail>
                   <Image src={product.img} />
                   <Details>
@@ -225,12 +241,13 @@ const Cart = () => {
                 </ProductDetail>
                 <PriceDetail>
                   <ProductAmountContainer>
-                    <Add />
+                    <Add onClick={() => handleIncreaseQuantity(product)} />
                     <ProductAmount>{product.quantity}</ProductAmount>
-                    <Remove />
+                    <Remove onClick={() => handleDecreaseQuantity(product)} />
+                    <Button onClick={() => handleRemoveProduct(product)}>REMOVE</Button>
                   </ProductAmountContainer>
                   <ProductPrice>
-                  ₹ {product.price * product.quantity}
+                    ₹ {product.price * product.quantity}
                   </ProductPrice>
                 </PriceDetail>
               </Product>

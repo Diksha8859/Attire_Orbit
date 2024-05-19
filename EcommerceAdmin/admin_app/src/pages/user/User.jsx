@@ -27,7 +27,7 @@ import {
                 className="userShowImg"
               />
               <div className="userShowTopTitle">
-                <span className="userShowUsername">Anna Becker</span>
+                <span className="userShowUsername">Diksha</span>
                 <span className="userShowUserTitle">Software Engineer</span>
               </div>
             </div>
@@ -35,24 +35,24 @@ import {
               <span className="userShowTitle">Account Details</span>
               <div className="userShowInfo">
                 <PermIdentity className="userShowIcon" />
-                <span className="userShowInfoTitle">annabeck99</span>
+                <span className="userShowInfoTitle">diksha2021128</span>
               </div>
               <div className="userShowInfo">
                 <CalendarToday className="userShowIcon" />
-                <span className="userShowInfoTitle">10.12.1999</span>
+                <span className="userShowInfoTitle">12.04.2002</span>
               </div>
               <span className="userShowTitle">Contact Details</span>
               <div className="userShowInfo">
                 <PhoneAndroid className="userShowIcon" />
-                <span className="userShowInfoTitle">+1 123 456 67</span>
+                <span className="userShowInfoTitle">+91 8825258079</span>
               </div>
               <div className="userShowInfo">
                 <MailOutline className="userShowIcon" />
-                <span className="userShowInfoTitle">annabeck99@gmail.com</span>
+                <span className="userShowInfoTitle">diksha2021128@gmail.com</span>
               </div>
               <div className="userShowInfo">
                 <LocationSearching className="userShowIcon" />
-                <span className="userShowInfoTitle">New York | USA</span>
+                <span className="userShowInfoTitle">Noida | Delhi</span>
               </div>
             </div>
           </div>
@@ -64,7 +64,7 @@ import {
                   <label>Username</label>
                   <input
                     type="text"
-                    placeholder="annabeck99"
+                    placeholder="diksha2021128"
                     className="userUpdateInput"
                   />
                 </div>
@@ -72,7 +72,7 @@ import {
                   <label>Full Name</label>
                   <input
                     type="text"
-                    placeholder="Anna Becker"
+                    placeholder="Diksha Shashwat"
                     className="userUpdateInput"
                   />
                 </div>
@@ -88,7 +88,7 @@ import {
                   <label>Phone</label>
                   <input
                     type="text"
-                    placeholder="+1 123 456 67"
+                    placeholder="+91 8825258079"
                     className="userUpdateInput"
                   />
                 </div>
@@ -96,7 +96,7 @@ import {
                   <label>Address</label>
                   <input
                     type="text"
-                    placeholder="New York | USA"
+                    placeholder="Noida | Delhi"
                     className="userUpdateInput"
                   />
                 </div>

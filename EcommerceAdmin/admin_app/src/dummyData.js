@@ -67,93 +67,84 @@ export const userData = [
   export const userRows = [
     {
       id: 1,
-      username: "Jon Snow",
+      username: "Diksha",
       avatar:
-        "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      email: "jon@gmail.com",
+        "https://wallpapercave.com/wp/wc1709944.jpg",
+      email: "diksha2021128@gmail.com",
       status: "active",
-      transaction: "$120.00",
+      transaction: "₹500.00",
     },
     {
       id: 2,
-      username: "Jon Snow",
+      username: "Chhaya",
       avatar:
-        "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      email: "jon@gmail.com",
+        "https://wallpapercave.com/wp/wc1709944.jpg",
+      email: "chhaya2021128@gmail.com",
       status: "active",
-      transaction: "$120.00",
+      transaction: "₹900.00",
     },
     {
       id: 3,
-      username: "Jon Snow",
+      username: "Akanksha",
       avatar:
-        "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      email: "jon@gmail.com",
+        "https://wallpapercave.com/wp/wc1709944.jpg",
+      email: "akanksha2021128@gmail.com",
       status: "active",
-      transaction: "$120.00",
+      transaction: "₹1000.00",
     },
     {
       id: 4,
-      username: "Jon Snow",
+      username: "Harsh",
       avatar:
-        "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      email: "jon@gmail.com",
+        "https://wallpapercave.com/wp/wc1709944.jpg",
+      email: "harsh2021128@gmail.com",
       status: "active",
-      transaction: "$120.00",
+      transaction: "₹1500.00",
     },
     {
       id: 5,
-      username: "Jon Snow",
+      username: "Ujjwal",
       avatar:
-        "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      email: "jon@gmail.com",
+        "https://wallpapercave.com/wp/wc1709944.jpg",
+      email: "ujjwal2021128@gmail.com",
       status: "active",
-      transaction: "$120.00",
+      transaction: "₹2000.00",
     },
     {
       id: 6,
-      username: "Jon Snow",
+      username: "Isha",
       avatar:
-        "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      email: "jon@gmail.com",
+        "https://wallpapercave.com/wp/wc1709944.jpg",
+      email: "isha2021128@gmail.com",
       status: "active",
-      transaction: "$120.00",
+      transaction: "₹700.00",
     },
     {
       id: 7,
-      username: "Jon Snow",
+      username: "Amrita",
       avatar:
-        "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      email: "jon@gmail.com",
+        "https://wallpapercave.com/wp/wc1709944.jpg",
+      email: "amrita2021128@gmail.com",
       status: "active",
-      transaction: "$120.00",
+      transaction: "₹600.00",
     },
     {
       id: 8,
-      username: "Jon Snow",
+      username: "Rohit",
       avatar:
-        "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      email: "jon@gmail.com",
+        "https://wallpapercave.com/wp/wc1709944.jpg",
+      email: "rohit2021128@gmail.com",
       status: "active",
-      transaction: "$120.00",
+      transaction: "₹1500.00",
     },
     {
       id: 9,
-      username: "Jon Snow",
+      username: "Rahul",
       avatar:
-        "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      email: "jon@gmail.com",
+        "https://wallpapercave.com/wp/wc1709944.jpg",
+      email: "rahul2021128@gmail.com",
       status: "active",
-      transaction: "$120.00",
-    },
-    {
-      id: 10,
-      username: "Jon Snow",
-      avatar:
-        "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      email: "jon@gmail.com",
-      status: "active",
-      transaction: "$120.00",
+      transaction: "₹800.00",
     },
   ];
 
@@ -162,10 +153,10 @@ export const userData = [
       id: 1,
       name: "Apple Airpods",
       img:
-        "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+        "https://wallpapercave.com/wp/wc1709944.jpg",
       stock: 123,
       status: "active",
-      price: "$120.00",
+      price: "₹120.00",
     },
     {
       id: 2,
@@ -174,7 +165,7 @@ export const userData = [
         "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       stock: 123,
       status: "active",
-      price: "$120.00",
+      price: "₹120.00",
     },
     {
       id: 3,
@@ -183,7 +174,7 @@ export const userData = [
         "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       stock: 123,
       status: "active",
-      price: "$120.00",
+      price: "₹120.00",
     },
     {
       id: 4,
@@ -192,7 +183,7 @@ export const userData = [
         "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       stock: 123,
       status: "active",
-      price: "$120.00",
+      price: "₹120.00",
     },
     {
       id: 5,
@@ -201,7 +192,7 @@ export const userData = [
         "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       stock: 123,
       status: "active",
-      price: "$120.00",
+      price: "₹120.00",
     },
     {
       id: 6,
@@ -210,7 +201,7 @@ export const userData = [
         "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       stock: 123,
       status: "active",
-      price: "$120.00",
+      price: "₹120.00",
     },
     {
       id: 7,
@@ -219,7 +210,7 @@ export const userData = [
         "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       stock: 123,
       status: "active",
-      price: "$120.00",
+      price: "₹120.00",
     },
     {
       id: 8,
@@ -228,7 +219,7 @@ export const userData = [
         "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       stock: 123,
       status: "active",
-      price: "$120.00",
+      price: "₹12000.00",
     },
     {
       id: 9,
@@ -237,7 +228,7 @@ export const userData = [
         "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       stock: 123,
       status: "active",
-      price: "$120.00",
+      price: "₹12000.00",
     },
     {
       id: 10,
@@ -246,6 +237,6 @@ export const userData = [
         "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       stock: 123,
       status: "active",
-      price: "$120.00",
+      price: "₹12000.00",
     },
   ];

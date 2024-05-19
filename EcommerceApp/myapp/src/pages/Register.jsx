@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import { useHistory } from "react-router-dom";
 
 const Container = styled.div`
   width: 100vw;
@@ -52,9 +53,21 @@ const Button = styled.button`
   background-color: teal;
   color: white;
   cursor: pointer;
+  margin: 10px 0;
+`;
+
+const LoginButton = styled(Button)`
+  background-color: gray;
 `;
 
 const Register = () => {
+  const history = useHistory();
+
+  const handleLoginRedirect = (e) => {
+    e.preventDefault();
+    history.push("/login");
+  };
+
   return (
     <Container>
       <Wrapper>
@@ -70,8 +83,11 @@ const Register = () => {
             By creating an account, I consent to the processing of my personal
             data in accordance with the <b>PRIVACY POLICY</b>
           </Agreement>
-          <Button>CREATE</Button>
+          <Button type="submit">CREATE</Button>
         </Form>
+        <LoginButton type="button" onClick={handleLoginRedirect}>
+          GO TO LOGIN
+        </LoginButton>
       </Wrapper>
     </Container>
   );

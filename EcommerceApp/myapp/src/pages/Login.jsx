@@ -1,9 +1,9 @@
-
 import { useState } from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
 import { login } from "../redux/apiCalls";
 import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
 
 const Container = styled.div`
   width: 100vw;
@@ -69,16 +69,37 @@ const Error = styled.span`
   color: red;
 `;
 
+const HomeButton = styled(Button)`
+  background-color: gray;
+`;
+
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
+  const history = useHistory();
   const { isFetching, error } = useSelector((state) => state.user);
 
   const handleClick = (e) => {
     e.preventDefault();
     login(dispatch, { username, password });
   };
+
+  const handleHomeRedirect = (e) => {
+    e.preventDefault();
+    history.push("/");
+  };
+
+  const handlePasswordLinkClick = (e) => {
+    e.preventDefault();
+    // Handle password link click action
+  };
+
+  const handleCreateAccountLinkClick = (e) => {
+    e.preventDefault();
+    // Handle create account link click action
+  };
+
   return (
     <Container>
       <Wrapper>
@@ -97,9 +118,10 @@ const Login = () => {
             LOGIN
           </Button>
           {error && <Error>Something went wrong...</Error>}
-          <Link>DO NOT YOU REMEMBER THE PASSWORD?</Link>
-          <Link>CREATE A NEW ACCOUNT</Link>
+          <Link onClick={handlePasswordLinkClick}>DO NOT YOU REMEMBER THE PASSWORD?</Link>
+          <Link onClick={handleCreateAccountLinkClick}>CREATE A NEW ACCOUNT</Link>
         </Form>
+        <HomeButton onClick={handleHomeRedirect}>GO TO HOME</HomeButton>
       </Wrapper>
     </Container>
   );
